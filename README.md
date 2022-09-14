@@ -1,10 +1,3 @@
----
-title: "Revana Installation and Usage with demo data"
-author: "Elias Ulrich"
-date: "August 28, 2022"
-output: github_document
----
-
 This document will guide you through the installation of the _Revana_ R package and show you how to use it with the help of the demonstration data provided.
 
 # Installation
@@ -53,7 +46,6 @@ First install **remotes**, if you haven't installed it already.
 
 You can do this by executing the following code inside the R console:
 
-
 ```r
 if (!requireNamespace("remotes", quietly = TRUE))
   install.packages("remotes")
@@ -62,7 +54,6 @@ if (!requireNamespace("remotes", quietly = TRUE))
 After that you can proceed with the **installation of Revana**.
 
 Executing the following code inside the R console will install Revana and all its dependencies:
-
 
 ```r
 remotes::install_github("https://github.com/KiTZ-Heidelberg/revana")
@@ -88,7 +79,7 @@ In the following, we will run you through a small demonstration. To view the res
 
 To make the usage of Revana as accessible as possible, this guide will run you through its usage step by step. We provide you with a **small sample of genomic data of patients with medulloblastoma** (group 3 and 4) and will use it to **demonstrate the workflow of Revana**.
 
-First download the demo data from github: https://github.com/KiTZ-Heidelberg/revana-demo-data/demo_data.zip
+First download the demo data from github: https://github.com/KiTZ-Heidelberg/revana-demo-data/raw/released/demo_data.zip
 
 Unpack the directory.
 
@@ -97,7 +88,6 @@ Revana uses a **paths.txt** file as input. This file is used to provide the path
 To help you understand how the paths.txt file can be created, we have not provided it with the demo data. Instead we will create it manually.
 
 To do this open an R session and execute the following code:
-
 
 ```r
 # insert the path to the unzipped folder containing the demo data here
@@ -136,7 +126,6 @@ _For example: file.path("/path/to/my","custom","directory") will output "/path/t
 Please note, that in order to keep this demonstration as simple as possible, we omitted some of the features and data integration capabilities in this demonstration. To find out everything about the more sophisticated features of Revana, please view the documentation.
 
 Run the following code:
-
 
 ```r
 library(revana)
@@ -222,7 +211,6 @@ As you might have noticed our output directory contains many different files, wi
 
 As we want to include the result data of medulloblastoma groups 3 and 4, we will first have to merge the files.
 
-
 ```r
 group_3_results_file <- file.path(results_folder_group_3,"results.paths.txt")
 group_4_results_file <- file.path(results_folder_group_4,"results.paths.txt")
@@ -242,7 +230,6 @@ merge_results_paths_files(
 ```
 
 To create the report, first create an output folder for it. This folder will be portable as long as you don't change its structure. Then run the report builder:
-
 
 ```r
 # Path to the created folder - again: you can use any directory you desire
