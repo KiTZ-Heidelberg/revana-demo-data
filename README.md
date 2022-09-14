@@ -45,7 +45,7 @@ As R itself is usually being compiled with these tools upon its installation, th
 
 **Revana** can easily by installed from inside the R console with the help of "**Remotes**". **Remotes** is a widely used R package that provides an easy way to install other R packages from sources outside of CRAN. We consider it the **most reliable and convenient way to install Revana**, which is hosted on github.com.
 
-_Additional information: Remotes is a more lightweight isolation of the installation utilities provided by devtools.Therefore, we recommend it for the installation of Revana. Nevertheless, if you have **devtools** installed and are accustomed to its usage, feel free to install Revana with its **install_github** function: devtools::install_github("https://github.com/KiTZ-Heidelberg/revana")_
+_Additional information: Remotes is a more lightweight isolation of the installation utilities provided by devtools. Therefore, we recommend it for the installation of Revana. Nevertheless, if you have **devtools** installed and are accustomed to its usage, feel free to install Revana with its **install_github** function: devtools::install_github("https://github.com/KiTZ-Heidelberg/revana")_
 
 ## How to install Revana
 
@@ -78,11 +78,11 @@ Revana relies on a large number of dependencies. While this is necessary to prov
 
   - Setting _options(pkgType = "both")_ makes R preferably install binary versions of the packages if available. Also, select to install binary versions of the packages, when prompted. This can greatly increase installation speed under Windows and MacOS systems. Unfortunately, this option is **not available for Linux distributions** and users will be forced to await package compilation.
 
-  - Please do not hesitate to contact us (elias.ulrich@kitz-heidelberg.de), if you have problems among the installation of Revana.
+  - Please do not hesitate to contact us (elias.ulrich@kitz-heidelberg.de), if you are facing any problems throughout the installation of Revana.
 
 # Demo Report
 
-In the following, we will run you through a small demonstration. To view the results of our **entire demonstration cohort** and see some of the **more advanced features** in action open https://kitz-heidelberg.github.io/revana-demo-report/report.html .
+In the following, we will run you through a small demonstration. To view the results of our **entire demonstration cohort** and see some of the **more advanced features** in action, open https://kitz-heidelberg.github.io/revana-demo-report/report.html .
 
 # Running Revana with demo data
 
@@ -262,4 +262,4 @@ create_HTML_report_new(
 
 That's it! Now you should be able to view the report by opening the created _report.html_ file with an up to date version of your favorite browser like Google Chrome.
 
-To view the results of our entire demonstration cohort and see some of the more advanced features in action open https://kitz-heidelberg.github.io/revana-demo-report/report.html
+To view the results of our entire demonstration cohort and see some of the more advanced features in action, open https://kitz-heidelberg.github.io/revana-demo-report/report.html
