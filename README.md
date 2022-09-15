@@ -36,7 +36,7 @@ As R itself is usually being compiled with these tools upon its installation, th
 
 ## Installer: "Devtools" R-package
 
-**Revana** can easily by installed from inside the R console with the help of "**Remotes**". **Remotes** is a widely used R package that provides an easy way to install other R packages from sources outside of CRAN. We consider it the **most reliable and convenient way to install Revana**, which is hosted on github.com.
+**Revana** can be easily installed from inside the R console with the help of "**Remotes**". **Remotes** is a widely used R package that provides an easy way to install other R packages from sources outside of CRAN. We consider it the **most reliable and convenient way to install Revana**, which is hosted on github.com.
 
 _Additional information: Remotes is a more lightweight isolation of the installation utilities provided by devtools. Therefore, we recommend it for the installation of Revana. Nevertheless, if you have **devtools** installed and are accustomed to its usage, feel free to install Revana with its **install_github** function: devtools::install_github("https://github.com/KiTZ-Heidelberg/revana")_
 
