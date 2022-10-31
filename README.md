@@ -32,7 +32,7 @@ or
 
 https://cran.r-project.org/doc/manuals/R-admin.html#Essential-and-useful-other-programs-under-a-Unix_002dalike
 
-:warning: **Attention users with Apple M1 devices** :warning
+:warning: **Attention users with Apple M1 devices** :warning:
 
 Mac users with the new Apple M1 chip must use the Intel 64-bit build of R, as Bioconductor does not currently support the Apple silicon-specific arm64 build of R. Installation of Revana on the arm64 build of R will fail due to incompability with Bioconductor dependencies.
 
