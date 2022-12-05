@@ -7,7 +7,8 @@ This document will guide you through the installation of the *Revana* R
 package and show you how to use it with the help of the demonstration
 data provided.
 
-📎 Find this walkthrough as HTML rendered R markdown [here](about:blank)
+📎 Find this walkthrough as HTML rendered R markdown
+[here](https://kitz-heidelberg.github.io/revana-demo-data/README.html)
 or as Github README
 [here](https://github.com/KiTZ-Heidelberg/revana-demo-data)
 
