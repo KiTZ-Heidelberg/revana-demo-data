@@ -188,7 +188,7 @@ dir.create(results_folder_group_4)
 # run Revana for Group 3 (you can also loop over the groups like above)
 GROUP_NAME <- "group_3"
 
-run(
+run_analysis(
   # path to the created paths file
   paths_file_path = file.path(demo_data_path, GROUP_NAME, "paths.txt"),
 
@@ -214,7 +214,7 @@ run(
 # run Revana for Group 4
 GROUP_NAME <- "group_4"
 
-run(
+run_analysis(
   # path to the created paths file
   paths_file_path = file.path(demo_data_path, GROUP_NAME, "paths.txt"),
 
@@ -277,7 +277,7 @@ HTML_report_output_dir_path <- file.path(results_folder,"report")
 dir.create(HTML_report_output_dir_path)
 
 # create the HTML report
-create_HTML_report_new(
+create_results_HTML_report(
   # output directory, where the HTML report should be stored
   HTML_report_output_dir_path,
   # results paths file - see above
