@@ -116,6 +116,13 @@ caveats.
     download and installation process might take some time. You might
     want to grab a coffee while the installation proceeds.
 
+-   Relying on a bad internet connection while installing Revana can
+    cause timeout errors to occur througout the download of Revana’s
+    dependencies. If you find a message like “Timeout of 60 seconds was
+    reached” or similar within the installation output, it might help to
+    extend the timeout limits. Use *options(timeout=1000)* to set the
+    timeout limit to 1000 seconds.
+
 -   While Revana **does not need to be compiled** throughout
     installation, some of its dependencies do. Depending on your system
     this compilation can take some time or even fail. Use the following
