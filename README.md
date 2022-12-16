@@ -1,9 +1,9 @@
-Revana Installation and Usage Walkthrough with demo data
-================
+# Revana Installation and Usage Walkthrough with demo data
+
 Elias Ulrich
 December 5, 2022
 
-This document will guide you through the installation of the *Revana* R
+This document will guide you through the installation of the _Revana_ R
 package and show you how to use it with the help of the demonstration
 data provided.
 
@@ -29,7 +29,7 @@ required dependencies.
 
 Also, please make sure your system has the software installed that R
 requires for **package compilation**. View the R documentation of
-*install.packages”* for details:
+_install.packages”_ for details:
 
 **For Windows users**
 
@@ -81,12 +81,12 @@ provides an easy way to install other R packages from sources outside of
 CRAN. We consider it the **most reliable and convenient way to install
 Revana**, which is hosted on github.com.
 
-*Additional information: Remotes is a more lightweight isolation of the
+_Additional information: Remotes is a more lightweight isolation of the
 installation utilities provided by devtools. Therefore, we recommend it
 for the installation of Revana. Nevertheless, if you have **devtools**
 installed and are accustomed to its usage, feel free to install Revana
 with its **install_github** function:
-devtools::install_github(“<https://github.com/KiTZ-Heidelberg/revana>”)*
+devtools::install_github(“<https://github.com/KiTZ-Heidelberg/revana>”)_
 
 ## How to install Revana
 
@@ -94,7 +94,7 @@ First install **remotes**, if you haven’t installed it already.
 
 You can do this by executing the following code inside the R console:
 
-``` r
+```r
 if (!requireNamespace("remotes", quietly = TRUE))
   install.packages("remotes")
 ```
@@ -104,7 +104,7 @@ After that you can proceed with the **installation of Revana**.
 Executing the following code inside the R console will install Revana
 and all its dependencies:
 
-``` r
+```r
 remotes::install_github("https://github.com/KiTZ-Heidelberg/revana")
 ```
 
@@ -112,36 +112,36 @@ Revana relies on a large number of dependencies. While this is necessary
 to provide you with its rich functionality, it does not come without any
 caveats.
 
--   Depending on the number of previously installed packages, the
-    download and installation process might take some time. You might
-    want to grab a coffee while the installation proceeds.
+- Depending on the number of previously installed packages, the
+  download and installation process might take some time. You might
+  want to grab a coffee while the installation proceeds.
 
--   Relying on a bad internet connection while installing Revana can
-    cause timeout errors to occur througout the download of Revana’s
-    dependencies. If you find a message like “Timeout of 60 seconds was
-    reached” or similar within the installation output, it might help to
-    extend the timeout limits. Use *options(timeout=1000)* to set the
-    timeout limit to 1000 seconds.
+- Relying on a bad internet connection while installing Revana can
+  cause timeout errors to occur throughout the download of Revana’s
+  dependencies. If you find a message like “Timeout of 60 seconds was
+  reached” or similar within the installation output, it might help to
+  extend the timeout limits. Use _options(timeout=1000)_ to set the
+  timeout limit to 1000 seconds.
 
--   While Revana **does not need to be compiled** throughout
-    installation, some of its dependencies do. Depending on your system
-    this compilation can take some time or even fail. Use the following
-    steps to troubleshoot:
+- While Revana **does not need to be compiled** throughout
+  installation, some of its dependencies do. Depending on your system
+  this compilation can take some time or even fail. Use the following
+  steps to troubleshoot:
 
-    -   Make sure you have the required compilers and software installed
-        on your system. See **“Requirements”** above for details.
+  - Make sure you have the required compilers and software installed
+    on your system. See **“Requirements”** above for details.
 
-    -   Setting *options(pkgType = “both”)* makes R preferably install
-        binary versions of the packages if available. Also, select to
-        install binary versions of the packages, when prompted. This can
-        greatly increase installation speed under Windows and MacOS
-        systems. Unfortunately, this option is **not available for Linux
-        distributions** and users will be forced to await package
-        compilation.
+  - Setting _options(pkgType = “both”)_ makes R preferably install
+    binary versions of the packages if available. Also, select to
+    install binary versions of the packages, when prompted. This can
+    greatly increase installation speed under Windows and MacOS
+    systems. Unfortunately, this option is **not available for Linux
+    distributions** and users will be forced to await package
+    compilation.
 
-    -   Please do not hesitate to contact us
-        (<elias.ulrich@kitz-heidelberg.de>), if you are facing any
-        problems throughout the installation of Revana.
+  - Please do not hesitate to contact us
+    (<elias.ulrich@kitz-heidelberg.de>), if you are facing any
+    problems throughout the installation of Revana.
 
 # Demo Report
 
@@ -154,8 +154,7 @@ the results of our **entire demonstration cohort** and see some of the
 
 To make the usage of Revana as accessible as possible, this guide will
 run you through its usage step by step. We provide you with a **small
-sample of genomic data of patients with medulloblastoma** (group 3 and
-4) and will use it to **demonstrate the workflow of Revana**.
+sample of genomic data of patients with medulloblastoma** (group 3 and 4) and will use it to **demonstrate the workflow of Revana**.
 
 First download the demo data from github:
 <https://github.com/KiTZ-Heidelberg/revana-demo-data/raw/released/demo_data.zip>
@@ -170,7 +169,7 @@ not provided it with the demo data. Instead we will create it manually.
 
 To do this open an R session and execute the following code:
 
-``` r
+```r
 # insert the path to the unzipped folder containing the demo data here
 # also: please use an absolute path starting with "/" (on Linux and MacOS)
 demo_data_path <- "/path/to/demo/data/folder"
@@ -197,11 +196,11 @@ for(GROUP_NAME in c("group_3","group_4")){
 }
 ```
 
-*Side Note:*
+_Side Note:_
 
-*The function file.path merges its arguments into a path.* *For example:
+_The function file.path merges its arguments into a path._ _For example:
 file.path(“/path/to/my”,“custom”,“directory”) will output
-“/path/to/my/custom/directory”*
+“/path/to/my/custom/directory”_
 
 **Now it is time to let Revana run its analysis!**
 
@@ -212,7 +211,7 @@ more sophisticated features of Revana, please view the documentation.
 
 Run the following code:
 
-``` r
+```r
 library(revana)
 
 # !!! Please adjust the following paths !!!
@@ -301,7 +300,7 @@ files. It will serve as input for our report building function.
 As we want to include the result data of medulloblastoma groups 3 and 4,
 we will first have to merge the files.
 
-``` r
+```r
 group_3_results_file <- file.path(results_folder_group_3,"results.paths.txt")
 group_4_results_file <- file.path(results_folder_group_4,"results.paths.txt")
 
@@ -323,7 +322,7 @@ To create the report, first create an output folder for it. This folder
 will be portable as long as you don’t change its structure. Then run the
 report builder:
 
-``` r
+```r
 # Path to the created folder - again: you can use any directory you desire
 HTML_report_output_dir_path <- file.path(results_folder,"report")
 
@@ -340,7 +339,7 @@ create_results_HTML_report(
 ```
 
 That’s it! Now you should be able to view the report by opening the
-created *report.html* file with an up to date version of your favorite
+created _report.html_ file with an up to date version of your favorite
 browser like Google Chrome.
 
 To view the results of our entire demonstration cohort and see some of
